@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connections');
 
 class Books extends Model {}
 
@@ -9,13 +9,6 @@ Books.init(
             type: DataTypes.STRING,
             allowNull: false,
             primaryKey: true
-        },
-        review_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'book',
-                key: 'id'
-            }
         }
     },
     {
