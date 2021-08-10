@@ -1,1 +1,93 @@
-<h1>Hello world!</h1>
+<div class="container-fluid">
+    <div class="row">
+
+        {{!-- Side bar --}}
+
+
+        {{!-- Trending / popular things --}}
+        <div class="col-2">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Popular Reviews</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">A list of popular reviews could go here</p>
+
+                    {{!-- list of popular reviews --}}
+
+                    <ul class="list-group">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Most reviewed books</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">List of most reviewed books could go here</p>
+
+                    {{!-- List of most reviewed books --}}
+
+                    <ul class="list-group">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+
+        {{!-- Main content --}}
+
+        <div class="col-7">
+
+            {{!-- Post review --}}
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Post your review</label>
+                <textarea class="form-control" id="book-title" rows="1" placeholder="Enter book title here"></textarea>
+                <textarea class="form-control" id="book-title" rows="1" placeholder="Enter book author here"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            {{!-- list items of reviews from people following / friends, will need to be dyanmically created --}}
+
+            <ul class="list-group">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li>
+            </ul>
+        </div>
+
+        {{!-- Nav/Menu --}}
+
+        <div class="col-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Friends</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Discover</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </div>>
+</div>
