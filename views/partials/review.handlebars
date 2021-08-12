@@ -1,0 +1,21 @@
+{{> review-info review }}
+
+{{#if loggedIn}}
+<div class="card">
+    <form class = "card-body comment-form" id = "comment-form">
+        <label class = "form-label">Comment</label>
+        <input id="review-comment" name = "comment-body" class = "form-input"/>
+
+        <button type = "submit" class = "button">Submit</button>
+
+    </form>
+</div>
+{{/if}}
+
+{{!-- may need to change review.comments --> review.comment --}}
+
+{{review-comments review.comments}}
+
+{{#if loggedIn}}
+<script src="/js/comment.js"></script>
+{{/if}}
