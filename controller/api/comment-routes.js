@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Comment } = require('../../model');
-const sequelize = require('../../config/connection');
+const sequelize = require('../../config/connections');
+// add withAuth in once passport is configured
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
@@ -23,7 +24,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
     if (req.session) {
         Comment.create({
             comment_content: req.body.comment_content,
@@ -38,7 +39,7 @@ router.post('/', withAuth, (req, res) => {
     }
 });
 
-router.put('/:id', withAuth, (req, res) => {
+router.put('/:id', (req, res) => {
     Comment.update({
         comment_content: req.body.comment_content
     }, {
@@ -57,7 +58,7 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
-router.delete('/:id', withAuth, (req, res) => {
+router.delete('/:id', (req, res) => {
     Comment.destroy({
         where: { id: req.params.id }
     })

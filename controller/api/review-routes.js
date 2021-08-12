@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Reviews, User, Comment } = require('../../model');
-const sequelize = require('../../config/connection');
+const sequelize = require('../../config/connections');
+// add withAuth in once passport is configured
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
@@ -73,12 +74,12 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
     Reviews.create({
         review_content: req.body.review_content,
+        book_title: req.body.book_title,
+        author: req.body.author,
         user_id: req.session.user_id,
-        book_title: req.body.title,
-        author: req.body.author
     })
     .then(reviewData => res.json(reviewData))
     .catch(err => {
@@ -87,7 +88,7 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
-router.put('/:id', withAuth, (req, res) => {
+router.put('/:id', (req, res) => {
     Reviews.update(req.body,
         {
             where: { id: req.params.id }
@@ -106,7 +107,7 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
-router.delete('/:id', withAuth, (req, res) => {
+router.delete('/:id', (req, res) => {
     Reviews.destroy({
       where: {
         id: req.params.id

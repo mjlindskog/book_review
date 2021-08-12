@@ -1,9 +1,9 @@
 const router = require('express').Router();
-
+const sequelize = require('../../config/connections');
 const { User } = require('../../model');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
+// add withAuth in once passport is configured
 const withAuth = require('../../utils/auth');
 
 // /api/users/
