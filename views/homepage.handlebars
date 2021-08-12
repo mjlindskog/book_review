@@ -6,20 +6,20 @@
 
         {{!-- Trending / popular things --}}
         <div class="col-2">
-            <div class="card" style="width: 18rem;">
+            <div class="card bg-opacity-25 bg-primary" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Popular Reviews</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">A list of popular reviews could go here</p>
+                    <h5 class="card-title bg-opacity-25 bg-primary">Popular Reviews</h5>
+                    <h6 class="card-subtitle mb-2 text-muted bg-opacity-25 bg-primary">Card subtitle</h6>
+                    <p class="card-text bg-opacity-25 bg-primary">A list of popular reviews could go here</p>
 
                     {{!-- list of popular reviews --}}
 
                     <ul class="list-group">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
-                        <li class="list-group-item">A fourth item</li>
-                        <li class="list-group-item">And a fifth one</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary">An item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary">A second item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary">A third item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary">A fourth item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary">And a fifth one</li>
                     </ul>
                     <a href="#" class="card-link">Card link</a>
                     <a href="#" class="card-link">Another link</a>
@@ -34,12 +34,12 @@
 
                     {{!-- List of most reviewed books --}}
 
-                    <ul class="list-group">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
-                        <li class="list-group-item">A fourth item</li>
-                        <li class="list-group-item">And a fifth one</li>
+                    <ul class="list-group bg-opacity-25 bg-primary">
+                        <li class="list-group-item bg-opacity-25 bg-primary">An item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary">A second item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary">A third item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary">A fourth item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary">And a fifth one</li>
                     </ul>
                     <a href="#" class="card-link">Card link</a>
                     <a href="#" class="card-link">Another link</a>
@@ -53,22 +53,39 @@
 
             {{!-- Post review --}}
 
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Post your review</label>
-                <textarea class="form-control" id="book-title" rows="1" placeholder="Enter book title here"></textarea>
-                <textarea class="form-control" id="book-title" rows="1" placeholder="Enter book author here"></textarea>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <div class="form-signin text-center">
+                <h3 class="h3">What's your review?</h3>
+                <form class="card-body" id="add-review-form">
+                    <div class="form-floating mb-3">
+                        <label for="book-title" class="form-label"></label>
+                        <input type="text" id="book-title" name="book-title" class="form-input w-100" autofocus="true"
+                            placeholder="Enter Book Title" />
+                        <label for="book-author" class="form-label"></label>
+                        <input type="text" id="book-author" name="book-author" class="form-input w-100" autofocus="true"
+                            placeholder="Enter Book Author" />
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <label class="form-label" for="content"></label>
+                        <textarea id="content" name="review_content" class="form-input w-100" aria-label="With textarea"
+                            autofocus="true" placeholder="Type your review here..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-50 btn btn-lg btn-info mb-3">Submit</button>
+                </form>
             </div>
 
             {{!-- list items of reviews from people following / friends, will need to be dyanmically created --}}
 
-            <ul class="list-group">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-                <li class="list-group-item">A fourth item</li>
-                <li class="list-group-item">And a fifth one</li>
-            </ul>
+
+            <article class="post">
+
+                {{#each reviews as |review| }}
+                {{> review-info review}}
+                {{/each}}
+
+            </article>
+
         </div>
 
         {{!-- Nav/Menu --}}
