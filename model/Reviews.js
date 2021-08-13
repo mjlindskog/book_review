@@ -25,21 +25,21 @@ Reviews.init(
                 key: 'id'
             }
         },
-        book_title: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        author: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        // book_id: {
+        // book_title: {
         //     type: DataTypes.STRING,
-        //     references: {
-        //         model: 'book',
-        //         key: 'id'
-        //     }
-        // }
+        //     allowNull: false,
+        // },
+        // author: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // },
+        book_id: {
+            type: DataTypes.STRING,
+            references: {
+                model: 'book',
+                key: 'id'
+            }
+        }
     },
     {
         sequelize,
