@@ -18,13 +18,6 @@ Books.init(
         author: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        review_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'review',
-                key: 'id'
-            }
         }
     },
     {
