@@ -4584,6 +4584,6 @@ const allBooks = [
     
 ];
 
-const seedComments = () => Books.bulkCreate(allBooks);
+const seedBooks = () => Books.bulkCreate(allBooks);
 
-module.exports = seedComments;
+module.exports = seedBooks;
