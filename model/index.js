@@ -23,9 +23,9 @@ Books.hasMany(Reviews, {
     foreignKey: 'book_id'
 });
 
-Reviews.belongsTo(Books, {
-    foreignKey: 'book_id'
-});
+// Reviews.belongTo(Books, {
+//     targetKey: 'book_id'
+// });
 
 Comment.belongsTo(User, {
     foreignKey: 'user_id'

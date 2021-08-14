@@ -9,7 +9,7 @@ const bookRoutes = require('./book-routes');
 router.use('/users', userRoutes);
 router.use('/reviews', reviewRoutes );
 router.use('/comments', commentRoutes);
-router.use('/books', bookRoutes);
+// router.use('/books', bookRoutes);
 
 
 module.exports = router;
