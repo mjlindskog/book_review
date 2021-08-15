@@ -1,8 +1,12 @@
 <div class="col-md-6 d-block mx-auto">
     <hr class="mt-5 mb-3">
-    <h2 class="text-center">Login</h2>
+    <h2 class="text-center">Register here</h2>
 
     <form class="form signup-form">
+        <div class="row form-group my-2">
+            <label for="name-signup">Username:</label>
+            <input class="form-input" type="text" id="name-signup" />
+        </div>
         <div class="row form-group my-2">
             <label for="email-signup">Email:</label>
             <input class="form-input" type="text" id="email-signup" />
@@ -12,16 +16,16 @@
             <input class="form-input" type="password" id="password-signup" />
         </div>
         <div class="row form-group my-3 mx-auto">
-            <button class="btn btn-primary" type="submit">Login</button>
+            <button class="btn btn-primary" type="submit">Submit</button>
         </div>
         <div class="row form-group my-3 mx-auto">
             <button class=" btn btn-success text-white"><a class="my-4 mx-5 text-white text-decoration-none" href="/auth/google">Sign Up with Google</a></button>
         </div>
         <div class="row form-group my-3 mx-auto">
-            <button class=" btn btn-dark"><a class="my-4 text-white text-decoration-none" href="/signup"> New User? Sign up here</a></button>
+            <button class=" btn btn-dark"><a class="my-4 text-white text-decoration-none" href="/login"> Return to Login</a></button>
         </div>
 
     </form>
 </div>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-<script src="js/login.js"></script>
+<script src="js/signup.js"></script>
