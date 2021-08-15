@@ -5,7 +5,7 @@ async function newReview(event) {
 
     const review_content = document.querySelector('textarea[name="review_content"]').value;
   
-    const response = await fetch(`/api/posts`, {
+    const response = await fetch(`/api/reviews`, {
         method: 'POST',
         body: JSON.stringify({
             title,

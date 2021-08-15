@@ -74,19 +74,19 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
-    Reviews.create({
+router.post('/', async (req, res) => {
+    try {
+      const reviewData = await Reviews.create({
         review_content: req.body.review_content,
         book_title: req.body.book_title,
         author: req.body.author,
         user_id: req.session.user_id,
-    })
-    .then(reviewData => res.json(reviewData))
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
-});
+      });
+      res.status(200).json(reviewData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
 
 router.put('/:id', (req, res) => {
     Reviews.update(req.body,
