@@ -2,23 +2,23 @@
     <hr class="mt-5 mb-3">
     <h2 class="text-center">Login</h2>
 
-    <form class="form signup-form">
+    <form class="form login-form">
         <div class="row form-group my-2">
             <label for="email-signup">Email:</label>
-            <input class="form-input" type="text" id="email-signup" />
+            <input class="form-input" type="text" id="email-login" />
         </div>
         <div class="row form-group my-2">
             <label for="password-signup">Password:</label>
-            <input class="form-input" type="password" id="password-signup" />
+            <input class="form-input" type="password" id="password-login"/>
         </div>
         <div class="row form-group my-3 mx-auto">
             <button class="btn btn-primary" type="submit">Login</button>
         </div>
+        {{!-- <div class="row form-group my-3 mx-auto">
+            <button class=" btn btn-success text-white"><a class="my-4 mx-5 text-white text-decoration-none" href="/auth/google">Sign In with Google</a></button>
+        </div> --}}
         <div class="row form-group my-3 mx-auto">
-            <button class=" btn btn-success text-white"><a class="my-4 mx-5 text-white text-decoration-none" href="/auth/google">Sign Up with Google</a></button>
-        </div>
-        <div class="row form-group my-3 mx-auto">
-            <button class=" btn btn-dark"><a class="my-4 text-white text-decoration-none" href="/signup"> New User? Sign up here</a></button>
+            <button class=" btn btn-secondary"><a class="my-4 text-white text-decoration-none" href="/signup"> New User? Sign up here</a></button>
         </div>
 
     </form>
