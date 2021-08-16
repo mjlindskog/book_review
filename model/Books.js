@@ -22,8 +22,9 @@ Books.init(
     },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
-        underscored: true,
+        uderscored: true,
         modelName: 'book'
     }
 );

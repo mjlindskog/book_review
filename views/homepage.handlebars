@@ -1,3 +1,4 @@
+{{#if loggedIn}}
 <div class="container-fluid">
     <div class="row">
 
@@ -110,4 +111,11 @@
             </ul>
         </div>
     </div>
+
 </div>
+{{else}}
+<div class="mx-auto">
+    <button type="button" class="btn btn-danger btn-lg"><a href="/login">Login</a></button>
+</div>
+{{/if}}
+
