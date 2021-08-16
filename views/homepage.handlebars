@@ -1,77 +1,81 @@
+{{#if loggedIn}}
 <div class="container-fluid">
     <div class="row">
 
-        {{!-- Side bar --}}
+         {{!-- Side bar --}}
 
 
-        {{!-- Trending / popular things --}}
-        <div class="col-2">
-            <div class="card bg-opacity-25 bg-primary" style="width: 18rem;">
+         {{!-- Trending / popular things --}} 
+        <div class="col-xl-3">
+            <div class="card bg-opacity-25 bg-primary" style="width: 22rem;">
                 <div class="card-body">
-                    <h5 class="card-title bg-opacity-25 bg-primary">Popular Reviews</h5>
-                    <h6 class="card-subtitle mb-2 text-muted bg-opacity-25 bg-primary">Card subtitle</h6>
-                    <p class="card-text bg-opacity-25 bg-primary">A list of popular reviews could go here</p>
+                    <h5 class="card-title custom-gray">Popular Reviews</h5>
+                    <!-- <h6 class="card-subtitle mb-2 text-muted"></h6>
+                            <p class="card-text">A list of popular reviews could go here</p> -->
 
-                    {{!-- list of popular reviews --}}
+                     {{!-- list of popular reviews --}} 
 
                     <ul class="list-group">
-                        <li class="list-group-item bg-opacity-25 bg-primary">An item</li>
-                        <li class="list-group-item bg-opacity-25 bg-primary">A second item</li>
-                        <li class="list-group-item bg-opacity-25 bg-primary">A third item</li>
-                        <li class="list-group-item bg-opacity-25 bg-primary">A fourth item</li>
-                        <li class="list-group-item bg-opacity-25 bg-primary">And a fifth one</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary text-light ">An item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary text-light">A second item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary text-light">A third item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary text-light">A fourth item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary text-light">And a fifth one</li>
                     </ul>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <!-- <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a> -->
                 </div>
             </div>
 
-            <div class="card" style="width: 18rem;">
+            <div class="card card bg-opacity-25 bg-primary mt-3" style="width: 22rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Most reviewed books</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">List of most reviewed books could go here</p>
+                    <h5 class="card-title custom-gray">Most reviewed books</h5>
+                    <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">List of most reviewed books could go here</p> -->
 
-                    {{!-- List of most reviewed books --}}
+                     {{!-- List of most reviewed books --}}
 
-                    <ul class="list-group bg-opacity-25 bg-primary">
-                        <li class="list-group-item bg-opacity-25 bg-primary">An item</li>
-                        <li class="list-group-item bg-opacity-25 bg-primary">A second item</li>
-                        <li class="list-group-item bg-opacity-25 bg-primary">A third item</li>
-                        <li class="list-group-item bg-opacity-25 bg-primary">A fourth item</li>
-                        <li class="list-group-item bg-opacity-25 bg-primary">And a fifth one</li>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-opacity-25 bg-primary text-light">An item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary text-light">A second item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary text-light">A third item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary text-light">A fourth item</li>
+                        <li class="list-group-item bg-opacity-25 bg-primary text-light">And a fifth one</li>
                     </ul>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <!-- <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a> -->
                 </div>
             </div>
         </div>
 
-        {{!-- Main content --}}
+         {{!-- Main content --}}
 
-        <div class="col-7">
+        <div class="col-xl-7">
 
-            {{!-- Post review --}}
+            {{!-- Post review --}} 
 
             <div class="form-signin text-center">
-                <h3 class="h3">What's your review?</h3>
+                <h3 class="h3 text-center custom-gray fw-bold">What's your review?</h3>
                 <form class="card-body" id="add-review-form">
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-3 bg-opacity-25 bg-primary">
                         <label for="book-title" class="form-label"></label>
-                        <input type="text" id="book-title" name="book-title" class="form-input w-100" autofocus="true"
+                        <input type="text" id="book-title" name="book-title"
+                            class="form-input w-100 bg-opacity-25 bg-primary text-light p-1" autofocus="true"
                             placeholder="Enter Book Title" />
                         <label for="book-author" class="form-label"></label>
-                        <input type="text" id="book-author" name="book-author" class="form-input w-100" autofocus="true"
+                        <input type="text" id="book-author" name="book-author"
+                            class="form-input w-100 bg-opacity-25 bg-primary text-light p-1" autofocus="true"
                             placeholder="Enter Book Author" />
                     </div>
 
                     <div class="form-floating mb-3">
                         <label class="form-label" for="content"></label>
-                        <textarea id="content" name="review_content" class="form-input w-100" aria-label="With textarea"
+                        <textarea id="content" name="review_content"
+                            class="form-input w-100 bg-opacity-25 bg-primary text-light p-1" aria-label="With textarea"
                             autofocus="true" placeholder="Type your review here..."></textarea>
                     </div>
 
-                    <button type="submit" class="w-50 btn btn-lg btn-info mb-3">Submit</button>
+                    <button type="submit" class="w-25 btn btn-sm custom-accent-background mb-3 fw-bold">Submit</button>
                 </form>
             </div>
 
@@ -90,8 +94,11 @@
 
         {{!-- Nav/Menu --}}
 
-        <div class="col-3">
+        <div class="col-xl-2">
             <ul class="nav flex-column">
+                <li class="text-white border border-light rounded p-2 fw-bold">
+                    Shelf
+                </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
@@ -101,10 +108,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Discover</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
             </ul>
         </div>
-    </div>>
+    </div>
 </div>
+{{else}}
+<div class="mx-auto">
+    <button type="button" class="btn btn-danger btn-lg"><a href="/login">Login</a></button>
+</div>
+{{/if}}

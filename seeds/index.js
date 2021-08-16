@@ -12,14 +12,15 @@ const seedAll = async () => {
     await seedUsers();
     // adds users to db
     console.log('\n');
+    await seedBooks();
+    // adds books to db
+    console.log('\n');
     await seedReviews();
     // adds reviews to db
     console.log('\n');
     await seedComments();
     // adds comments to reviews in db
-    console.log('\n');
-    await seedBooks();
-    // adds books to db
+
 
     process.exit(0);
 };

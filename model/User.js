@@ -57,13 +57,6 @@ User.init(
         uderscored: true,
         modelName: 'user'
     }
-    // {
-    //     sequelize,
-    //     timestamps: false,
-    //     freezeTableName: true,
-    //     uderscored: true,
-    //     modelName: 'user'
-    // }
 )
 
 module.exports = User;

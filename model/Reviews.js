@@ -14,9 +14,6 @@ Reviews.init(
         review_content: {
             type: DataTypes.TEXT,
             allowNull: false,
-            validate: {
-                len: [4]
-            }
         },
         user_id: {
             type: DataTypes.INTEGER,
@@ -34,7 +31,7 @@ Reviews.init(
         //     allowNull: false
         // },
         book_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'book',
                 key: 'id'
