@@ -12,11 +12,11 @@ Reviews.init(
             autoIncrement: true
         },
         review_content: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [4]
-            }
+            // validate: {
+            //     len: [4]
+            // }
         },
         user_id: {
             type: DataTypes.INTEGER,
