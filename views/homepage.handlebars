@@ -1,4 +1,4 @@
-{{#if loggedIn}}
+{{#if user}}
 <div class="container-fluid">
     <div class="row">
 
@@ -113,9 +113,11 @@
     </div>
 
 </div>
+
+<script src="/js/add-review.js"></script>
 {{else}}
-<div class="mx-auto">
-    <button type="button" class="btn btn-danger btn-lg"><a href="/login">Login</a></button>
+<div class="col-md-6 d-block text-center mx-auto">
+    <button type="button" class="row my-5 btn btn-danger btn-lg"><a class="text-white text-decoration-none" href="/login">Login</a></button>
 </div>
 {{/if}}
 

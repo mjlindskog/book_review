@@ -1,4 +1,4 @@
-async function newReview(event) {
+const newReview = async(event) => {
     event.preventDefault();
 
     const title = document.querySelector('input[name="book-title"]').value;
@@ -18,13 +18,9 @@ async function newReview(event) {
 
     if (response.ok) {
         document.location.reload();
-        console.log('review entered');
     } else {
         alert(response.statusText);
-        alert('review failed');
     }
 };
   
-document
-    .querySelector('#add-review-form')
-    .addEventListener('submit', newReview);
+// document.querySelector('#add-review-form').addEventListener('submit', newReview);
