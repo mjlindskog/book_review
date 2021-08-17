@@ -7,6 +7,7 @@ const passport = require('passport');
 const controller = require('./controller');
 const sequelize = require('./config/connections.js');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
