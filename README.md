@@ -1,6 +1,6 @@
 # Shelf
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://shielded-ravine-57321.herokuapp.com/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://tranquil-gorge-58028.herokuapp.com/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
